@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Occupational Profiles - Accommodation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #0056b3;
+            color: #ffffff;
+            padding: 15px 0;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .tabs button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .tabs button:hover {
+            background-color: #004085;
+        }
+
+        .section {
+            display: none;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 800px;
+            text-align: left;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        .footer {
+            background-color: #0056b3;
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .sector-image {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .centered-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .centered-button a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #0056b3;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .centered-button a:hover {
+            background-color: #004085;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        Occupational Profiles - Accommodation Sector
+    </header>
+
+    <div class="content">
+        <img src="accommodation.jpg" alt="Accommodation" class="sector-image">
+        
+        <div class="tabs">
+            <button onclick="showSection('sector-profile')">Sector Profile</button>
+            <button onclick="showSection('lmi')">Labour Market Information</button>
+            <button onclick="showSection('business-outlook')">Business Outlook</button>
+        </div>
+
+        <div id="sector-profile" class="section active">
+            <h2>Overview</h2>
+            <p>The accommodation sector includes businesses that provide lodging services, such as hotels, motels, and resorts. This sector plays a crucial role in the tourism industry by offering a place for travelers to stay.</p>
+            <h2>Industry Statistics</h2>
+            <p>In 2019, the accommodation and food services sector represented 2.4% of New Brunswick’s GDP, contributing $0.7 billion. This sector employed 21,900 people, showing a 0.5% increase from 2010.</p>
+        </div>
+
+        <div id="lmi" class="section">
+            <h2>Top 5 Occupations: Forecasted Job Openings (2023 to 2032)</h2>
+            <table>
+                <tr>
+                    <th>Occupation</th>
+                    <th>Forecasted Job Openings</th>
+                </tr>
+                <tr>
+                    <td>Food counter attendants, kitchen helpers and related support occupations</td>
+                    <td>1,281</td>
+                </tr>
+                <tr>
+                    <td>Restaurant and food service managers</td>
+                    <td>1,049</td>
+                </tr>
+                <tr>
+                    <td>Cooks</td>
+                    <td>903</td>
+                </tr>
+                <tr>
+                    <td>Food service supervisors</td>
+                    <td>375</td>
+                </tr>
+                <tr>
+                    <td>Food and beverage servers</td>
+                    <td>358</td>
+                </tr>
+            </table>
+            <h2>Employment by Region</h2>
+            <p>Details about employment in different regions of New Brunswick.</p>
+        </div>
+
+        <div id="business-outlook" class="section">
+            <h2>Business Outlook (2018-2027)</h2>
+            <p>Details about the business outlook for the accommodation sector over the next decade.</p>
+        </div>
+        
+        <div class="centered-button">
+            <a href="sector-reports.html">More Information on Accommodation Sector</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        All content © 2024 Government of New Brunswick.
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>

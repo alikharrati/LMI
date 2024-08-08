@@ -1,0 +1,161 @@
+/* تنظیمات کلی */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* تنظیمات هدر و لوگو */
+header {
+    background-color: #003366;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header .logo {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+/* تنظیمات منوی ناوبری */
+nav {
+    background-color: #002244;
+    color: #fff;
+}
+
+nav ul.nav-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul.nav-menu > li {
+    position: relative;
+}
+
+nav ul.nav-menu > li > a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+}
+
+nav ul.nav-menu > li > a:hover,
+nav ul.nav-menu > li > a.active {
+    background-color: #0055a5;
+}
+
+nav ul.nav-menu > li > ul.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #003366;
+    top: 100%;
+    left: 0;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 200px;
+}
+
+nav ul.nav-menu > li:hover > ul.dropdown {
+    display: block;
+}
+
+nav ul.nav-menu > li ul.dropdown li a {
+    padding: 10px;
+    color: #fff;
+}
+
+nav ul.nav-menu > li ul.dropdown li a:hover {
+    background-color: #0055a5;
+}
+
+/* تنظیمات بخش کانتینر اصلی */
+.container {
+    display: flex;
+    padding: 20px;
+}
+
+/* تنظیمات نوار کناری */
+.sidebar {
+    width: 20%;
+    padding: 10px;
+    background-color: #e6e6e6;
+    border-right: 1px solid #ccc;
+}
+
+.sidebar h3 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.sidebar .thumbnail {
+    width: 100%;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    padding: 2px;
+    transition: all 0.3s ease;
+}
+
+.sidebar .thumbnail:hover {
+    border-color: #0055a5;
+}
+
+/* تنظیمات محتوای اصلی */
+.main-content {
+    width: 80%;
+    padding: 20px;
+}
+
+.main-content .large-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.main-content p {
+    text-align: center;
+    font-size: 18px;
+}
+
+/* تنظیمات پاورقی */
+footer {
+    background-color: #003366;
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+}
+
+footer .logo {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* تنظیمات پاسخگو (Responsive) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar,
+    .main-content {
+        width: 100%;
+    }
+
+    nav ul.nav-menu {
+        flex-direction: column;
+    }
+
+    nav ul.nav-menu > li > ul.dropdown {
+        position: static;
+    }
+}

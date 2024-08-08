@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBjobs - Sector Profiles</title>
+    <style>
+        /* تنظیمات کلی */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* تنظیمات هدر و لوگو */
+        header {
+            background-color: #003366;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header .logo {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+        }
+
+        /* تنظیمات منوی ناوبری */
+        nav {
+            background-color: #002244;
+            color: #fff;
+        }
+
+        nav ul.nav-menu {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul.nav-menu > li {
+            position: relative;
+        }
+
+        nav ul.nav-menu > li > a {
+            color: #fff;
+            text-decoration: none;
+            padding: 15px 20px;
+            display: block;
+        }
+
+        nav ul.nav-menu > li > a:hover,
+        nav ul.nav-menu > li > a.active {
+            background-color: #0055a5;
+        }
+
+        nav ul.nav-menu > li > ul.dropdown {
+            display: none;
+            position: absolute;
+            background-color: #003366;
+            top: 100%;
+            left: 0;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            width: 200px;
+            z-index: 1000;
+        }
+
+        nav ul.nav-menu > li:hover > ul.dropdown {
+            display: block;
+        }
+
+        nav ul.nav-menu > li ul.dropdown li a {
+            padding: 10px;
+            color: #fff;
+            text-align: center;
+            display: block;
+        }
+
+        nav ul.nav-menu > li ul.dropdown li a:hover {
+            background-color: #0055a5;
+        }
+
+        /* تنظیمات بخش کانتینر اصلی */
+        .container {
+            display: flex;
+            padding: 20px;
+        }
+
+        /* تنظیمات نوار کناری */
+        .sidebar {
+            width: 20%;
+            padding: 10px;
+            background-color: #e6e6e6;
+            border-left: 1px solid #ccc;
+            height: 80vh;
+            overflow-y: scroll;
+            order: 2; /* انتقال به سمت راست */
+        }
+
+        .sidebar h3 {
+            text-align: center;
+            margin-top: 0;
+        }
+
+        .sidebar .thumbnail {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            padding: 2px;
+            transition: all 0.3s ease;
+            display: block;
+        }
+
+        .sidebar .thumbnail img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .sidebar .thumbnail:hover {
+            border-color: #0055a5;
+        }
+
+        /* تنظیمات محتوای اصلی */
+        .main-content {
+            width: 80%;
+            padding: 20px;
+        }
+
+        .main-content .large-image {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .main-content p {
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .main-content .sector-button {
+            display: inline-block;
+            margin: 10px 0;
+            padding: 10px 20px;
+            background-color: #0055a5;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .main-content .sector-button:hover {
+            background-color: #003366;
+        }
+
+        /* تنظیمات پاورقی */
+        footer {
+            background-color: #003366;
+            padding: 20px 0;
+            text-align: center;
+            color: #fff;
+        }
+
+        footer .logo {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+
+        /* تنظیمات پاسخگو (Responsive) */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar,
+            .main-content {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo1.jpg" alt="Logo 1" class="logo">
+    </header>
+
+    <nav>
+        <ul class="nav-menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Find a Job</a></li>
+            <li>
+                <a href="#" class="active">Labour Market Information</a>
+                <ul class="dropdown">
+                    <li><a href="labour-force-statistics.html">Labour Force Statistics</a></li>
+                    <li><a href="hiring-demand-bulletins.html">Hiring Demand Bulletins</a></li>
+                    <li><a href="labour-market-reports.html">Labour Market Reports</a></li>
+                    <li><a href="demographic-trends.html">Demographic Trends</a></li>
+                    <li><a href="occupational-profiles.html">Occupational Profiles and Snapshots</a></li>
+                    <li><a href="#sector-profiles">Sector Profiles</a></li> <!-- لینک به همین صفحه -->
+                </ul>
+            </li>
+            <li><a href="#">Explore Careers</a></li>
+            <li><a href="#">Find Talent</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- Main content area to display selected image and link -->
+        <div class="main-content">
+            <img id="mainImage" src="accommodation.jpg" alt="Accommodation and Food Services" class="large-image">
+            <a id="sectorLink" href="accommodation.html" class="sector-button">Accommodation and Food Services</a>
+        </div>
+
+        <!-- Sidebar with small images -->
+        <div class="sidebar">
+            <h3>Select a Sector</h3>
+            <a class="thumbnail" onclick="showSector('accommodation')"><img src="accommodation.jpg" alt="Accommodation and Food Services"></a>
+            <a class="thumbnail" onclick="showSector('agriculture')"><img src="agriculture.jpg" alt="Agriculture"></a>
+            <a class="thumbnail" onclick="showSector('business')"><img src="business.jpg" alt="Business"></a>
+            <a class="thumbnail" onclick="showSector('construction')"><img src="construction.jpg" alt="Construction"></a>
+            <a class="thumbnail" onclick="showSector('education')"><img src="education.jpg" alt="Education"></a>
+            <a class="thumbnail" onclick="showSector('finance')"><img src="finance.jpg" alt="Finance"></a>
+            <a class="thumbnail" onclick="showSector('fishing')"><img src="fishing.jpg" alt="Fishing"></a>
+            <a class="thumbnail" onclick="showSector('forestry')"><img src="forestry.jpg" alt="Forestry"></a>
+            <a class="thumbnail" onclick="showSector('healthcare')"><img src="health care.jpg" alt="Healthcare"></a>
+            <a class="thumbnail" onclick="showSector('information')"><img src="information.jpg" alt="Information"></a>
+            <a class="thumbnail" onclick="showSector('manufacturing')"><img src="manufacturing.jpg" alt="Manufacturing"></a>
+            <a class="thumbnail" onclick="showSector('mining')"><img src="mining.jpg" alt="Mining"></a>
+            <a class="thumbnail" onclick="showSector('otherservices')"><img src="other services.jpg" alt="Other Services"></a>
+            <a class="thumbnail" onclick="showSector('professional')"><img src="professional.jpg" alt="Professional Services"></a>
+            <a class="thumbnail" onclick="showSector('public')"><img src="public.jpg" alt="Public Administration"></a>
+            <a class="thumbnail" onclick="showSector('retail')"><img src="retail.jpg" alt="Retail"></a>
+            <a class="thumbnail" onclick="showSector('transportation')"><img src="transportation.jpg" alt="Transportation"></a>
+            <a class="thumbnail" onclick="showSector('utilities')"><img src="utilities.jpg" alt="Utilities"></a>
+            <a class="thumbnail" onclick="showSector('wholesale')"><img src="wholesale.jpg" alt="Wholesale"></a>
+        </div>
+    </div>
+
+    <footer>
+        <img src="logo2.jpg" alt="Logo 2" class="logo">
+        <p>© 2024 Government of New Brunswick. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showSector(sector) {
+            var sectors = {
+                'accommodation': {image: 'accommodation.jpg', page: 'accommodation.html', description: 'Accommodation and Food Services'},
+                'agriculture': {image: 'agriculture.jpg', page: 'agriculture.html', description: 'Agriculture'},
+                'business': {image: 'business.jpg', page: 'business.html', description: 'Business'},
+                'construction': {image: 'construction.jpg', page: 'construction.html', description: 'Construction'},
+                'education': {image: 'education.jpg', page: 'education.html', description: 'Education'},
+                'finance': {image: 'finance.jpg', page: 'finance.html', description: 'Finance'},
+                'fishing': {image: 'fishing.jpg', page: 'fishing.html', description: 'Fishing'},
+                'forestry': {image: 'forestry.jpg', page: 'forestry.html', description: 'Forestry'},
+                'healthcare': {image: 'health care.jpg', page: 'healthcare.html', description: 'Healthcare'},
+                'information': {image: 'information.jpg', page: 'information.html', description: 'Information'},
+                'manufacturing': {image: 'manufacturing.jpg', page: 'manufacturing.html', description: 'Manufacturing'},
+                'mining': {image: 'mining.jpg', page: 'mining.html', description: 'Mining'},
+                'otherservices': {image: 'other services.jpg', page: 'otherservices.html', description: 'Other Services'},
+                'professional': {image: 'professional.jpg', page: 'professional.html', description: 'Professional Services'},
+                'public': {image: 'public.jpg', page: 'public.html', description: 'Public Administration'},
+                'retail': {image: 'retail.jpg', page: 'retail.html', description: 'Retail'},
+                'transportation': {image: 'transportation.jpg', page: 'transportation.html', description: 'Transportation'},
+                'utilities': {image: 'utilities.jpg', page: 'utilities.html', description: 'Utilities'},
+                'wholesale': {image: 'wholesale.jpg', page: 'wholesale.html', description: 'Wholesale'}
+            };
+
+            if (sectors[sector]) {
+                document.getElementById('mainImage').src = sectors[sector].image;
+                document.getElementById('mainImage').alt = sectors[sector].description;
+                document.getElementById('sectorLink').href = sectors[sector].page;
+                document.getElementById('sectorLink').textContent = sectors[sector].description;
+            }
+        }
+    </script>
+</body>
+</html>

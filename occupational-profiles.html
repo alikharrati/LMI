@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Occupational Profiles</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: all 0.3s ease;
+        }
+
+        .logo-full {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .navbar-static-top {
+            margin-bottom: 20px;
+            background-color: #f8f9fa;
+        }
+
+        .main-menu-block {
+            background-color: #343a40;
+            color: #fff;
+        }
+
+        .main-menu-block ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .main-menu-block ul li {
+            float: left;
+        }
+
+        .main-menu-block ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .main-menu-block ul li a:hover, .main-menu-block ul li a.active {
+            background-color: #007bff;
+        }
+
+        .main-menu-block .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: #343a40;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .main-menu-block .dropdown-menu a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .main-menu-block .dropdown-menu a:hover {
+            background-color: #007bff;
+        }
+
+        .main-menu-block li:hover .dropdown-menu {
+            display: block;
+        }
+
+        .container {
+            padding: 20px;
+            display: flex;
+            transition: all 0.3s ease;
+        }
+
+        .main-content {
+            padding: 20px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            flex-grow: 1;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar {
+            width: 200px;
+            margin-right: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar ul li {
+            background-color: #343a40;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .sidebar ul li a {
+            display: block;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .sidebar ul li a:hover, .sidebar ul li a.active {
+            background-color: #007bff;
+        }
+
+        .search-section {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .search-section h1, .search-section h3 {
+            margin-bottom: 10px;
+        }
+
+        .search-section input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            margin-right: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .search-section button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #343a40;
+            color: white;
+        }
+
+        .footer p {
+            margin: 10px 0;
+        }
+
+        .footer .logo-blue {
+            background-color: #007bff;
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        /* وقتی چت بات باز شود، صفحه به سمت چپ حرکت کند */
+        .chat-open .container,
+        .chat-open .main-content,
+        .chat-open .sidebar {
+            transform: translateX(-300px);
+        }
+    </style>
+</head>
+<body class="path-frontpage navbar-is-static-top has-glyphicons">
+    <header class="navbar navbar-default navbar-static-top sticky-header" id="navbar" role="banner">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <img src="logo1.jpg" alt="Logo 1" class="logo-full">
+            </div>
+            <div id="navbar-collapse" class="navbar-collapse collapse">
+                <nav role="navigation" aria-labelledby="block-main-menu-menu" class="main-menu-block">
+                    <ul class="menu menu--main nav navbar-nav">
+                        <li class="first">
+                            <a href="index.html" class="is-active">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">Find a Job</a>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-toggle active" data-toggle="dropdown">Labour Market Information</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="labour-force-statistics.html">Labour Force Statistics</a></li>
+                                <li><a href="hiring-demand-bulletins.html">Hiring Demand Bulletins</a></li>
+                                <li><a href="labour-market-reports.html">Labour Market Reports</a></li>
+                                <li><a href="demographic-trends.html">Demographic Trends</a></li>
+                                <li><a href="occupational-profiles.html" class="active">Occupational Profiles and Snapshots</a></li>
+                                <li><a href="index.html#sector-profiles">Sector Profiles</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Explore Careers</a></li>
+                        <li><a href="#">Find Talent</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="sidebar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Browse All</a></li>
+                <li><a href="#">NOC Index</a></li>
+                <li><a href="#">Français</a></li>
+                <li><a href="#">Compare</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <div class="search-section">
+                <h1>New Brunswick Occupational Profiles</h1>
+                <h3>Search for information on occupations in New Brunswick</h3>
+                <input type="text" placeholder="Search" id="searchInput">
+                <button onclick="search()">Search</button>
+            </div>
+
+            <p>This page contains detailed profiles and snapshots of various occupations.</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <img src="logo2.jpg" alt="Logo 2" class="logo-full logo-blue">
+        <p>© 2024 Government of New Brunswick. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function search() {
+            const query = document.getElementById('searchInput').value;
+            alert('You searched for: ' + query);
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const dropdowns = document.querySelectorAll('.dropdown-toggle');
+
+            dropdowns.forEach(dropdown => {
+                dropdown.addEventListener('click', function () {
+                    const nextElement = this.nextElementSibling;
+                    nextElement.style.display = nextElement.style.display === 'block' ? 'none' : 'block';
+                });
+            });
+
+            // Ensure dropdown closes when clicked outside
+            window.addEventListener('click', function (event) {
+                if (!event.target.matches('.dropdown-toggle')) {
+                    dropdowns.forEach(dropdown => {
+                        const nextElement = dropdown.nextElementSibling;
+                        if (nextElement.style.display === 'block') {
+                            nextElement.style.display = 'none';
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+
+    <!-- Chatbot Integration -->
+    <script src="https://cdn.botpress.cloud/webchat/v2/inject.js"></script>
+    <script src="https://mediafiles.botpress.cloud/388c5fd2-3839-4e08-98ee-32b5c2f211d8/webchat/v2/config.js"></script>
+    <script>
+        window.addEventListener('load', function() {
+            window.botpressWebChat.init({
+                botId: '184da6e7-8051-43cc-81a5-3bde37f78ad2',
+                hostUrl: 'https://cdn.botpress.cloud/webchat/v2',
+                messagingUrl: 'https://messaging.botpress.cloud',
+                botName: 'Occupational Profiles Bot',
+                enableTranscriptDownload: true,
+                showUserAvatar: false,
+                useCustomStyle: true,
+                customStyle: {
+                    botAvatarUrl: 'https://github.com/alikharrati/visualization/blob/main/logo.png?raw=true',
+                    botAvatarInitials: 'OPB'
+                },
+                overlay: {
+                    zIndex: 1000
+                },
+                hooks: {
+                    onWebchatOpen: function() {
+                        document.body.classList.add('chat-open');
+                    },
+                    onWebchatClose: function() {
+                        document.body.classList.remove('chat-open');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
